@@ -1,6 +1,7 @@
-import { isNegative } from './isNegative';
+import { isNegative } from ".";
 
-describe('1.1 Проверяет отрицательное ли число', () => {
+
+describe('1.1.1 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
   const inputs = [
     { number: -1, expected: true },
     { number: 0, expected: false },
