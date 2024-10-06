@@ -14,10 +14,6 @@ pnpm test
 ```text
 src
   └─ [ level_* ]
-        └─ [ level_*_* ]
-                ├─ ...ts
-                └─ ...spec.ts
+          ├─ level_*_*.ts
+          └─ level_*_*.spec.ts
 ```
-
-## TODO
-- настройка авто-тестов в браузере как [тут](https://github.com/codebox/top-down-parser)
