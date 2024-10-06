@@ -1,3 +1,5 @@
+import { getStringFromNum } from "../additional/utils";
+
 /**
  * 1.2.1 Возвращает первую цифру числа
  * @param num number
@@ -37,6 +39,4 @@ export function calcSumFirstAndLastDigit(num: number) {
 
 // -----------------------------------------------------------------------------------------------------
 
-function getStringFromNum(num: number) {
-  return `${Math.abs(num)}`;
-}
+
