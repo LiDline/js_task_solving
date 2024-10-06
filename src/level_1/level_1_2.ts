@@ -4,8 +4,8 @@
  * @return number
  */
 export function getFirstDigit(num: number) {
-    return Number(`${Math.abs(num)}`[0]);
-  }
+  return Number(getStringFromNum(num)[0]);
+}
 
 // -----------------------------------------------------------------------------------------------------
 
@@ -15,8 +15,28 @@ export function getFirstDigit(num: number) {
  * @return number
  */
 export function getLastDigit(num: number) {
-  const strNum = `${Math.abs(num)}`
+  const strNum = getStringFromNum(num);
+
   return Number(`${strNum}`[strNum.length - 1]);
 }
 
 // -----------------------------------------------------------------------------------------------------
+
+/**
+ * 1.2.3 Возвращает сумму последней и первой цифры числа
+ * @param num number
+ * @return number
+ */
+export function calcSumFirstAndLastDigit(num: number) {
+  if (getStringFromNum(num).length == 1) {
+    return Math.abs(num)
+  }
+
+  return getFirstDigit(num) + getLastDigit(num);
+}
+
+// -----------------------------------------------------------------------------------------------------
+
+function getStringFromNum(num: number) {
+  return `${Math.abs(num)}`;
+}
