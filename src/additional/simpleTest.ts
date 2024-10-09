@@ -13,7 +13,7 @@ export default function simpleTest<A, T>(
   testCases.forEach((obj, id) => {
     test(
       `${id + 1} Верный возврат для ${obj.input}` +
-        `${obj.secondInput ? 'и ' + obj.secondInput : ''}`,
+        `${obj.secondInput ? ' и ' + obj.secondInput : ''}`,
       () => {
         const res =
           obj.secondInput !== undefined

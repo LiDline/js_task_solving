@@ -21,7 +21,7 @@ describe('Уровень 1.1', () => {
     simpleTest(testCases, isNegative);
   });
 
-  describe('1.1.2 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
+  describe('1.1.2 Дана строка. Выведите в консоль длину этой строки.', () => {
     const testCases = [
       { input: '-1', expected: 2 },
       { input: 'asfsdgsdgergf', expected: 13 },
@@ -32,7 +32,7 @@ describe('Уровень 1.1', () => {
     simpleTest(testCases, lengthStr);
   });
 
-  describe('1.1.3 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
+  describe('1.1.3 Дана строка. Выведите в консоль последний символ строки.', () => {
     const testCases = [
       { input: '', expected: '' },
       { input: 'asfsdgsdgergf', expected: 'f' },
@@ -43,7 +43,7 @@ describe('Уровень 1.1', () => {
     simpleTest(testCases, lastSymbolOfString);
   });
 
-  describe('1.1.4 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
+  describe('1.1.4 Дано число. Проверьте, четное оно или нет.', () => {
     const testCases = [
       { input: -1, expected: false },
       { input: 0, expected: true },
@@ -55,7 +55,7 @@ describe('Уровень 1.1', () => {
     simpleTest(testCases, isEvenNumber);
   });
 
-  describe('1.1.5 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
+  describe('1.1.5 Даны два слова. Проверьте, что первые буквы этих слов совпадают.', () => {
     const testCases = [
       { input: 'AVB', secondInput: 'afdgef', expected: true },
       { input: 'hello', secondInput: 'world', expected: false },
@@ -73,7 +73,7 @@ describe('Уровень 1.1', () => {
     simpleTest(testCases, isFirstLetterMatch);
   });
 
-  describe('1.1.6 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.', () => {
+  describe('1.1.6 Дано слово. Получите его последнюю букву. Если слово заканчивается на мягкий знак, то получите предпоследнюю букву.', () => {
     const testCases = [
       { input: 'привет', expected: 'т' },
       { input: 'мама', expected: 'а' },
