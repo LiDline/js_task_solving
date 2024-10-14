@@ -1,4 +1,4 @@
-type InputData = string | number;
+type InputData = string | number | number[];
 
 type TestCases = {
   input: InputData;
