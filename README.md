@@ -2,6 +2,8 @@
 
 Решение задач  по JS по уровням с [сайта](https://code.mu/ru/javascript/tasker/stager/).
 
+Кол-во решённых задач на данный момент: **31**.
+
 ## Запуск тестов
 ```bash
 pnpm install --frozen-lockfile

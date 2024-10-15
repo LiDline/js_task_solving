@@ -1,4 +1,4 @@
-type InputData = string | number | number[];
+type InputData = string | number | number[] | string[];
 
 type TestCases = {
   input: InputData;
@@ -20,7 +20,11 @@ export default function simpleTest<A, T>(
             ? func(obj.input as A, obj.secondInput as A)
             : func(obj.input as A);
 
-        expect(res).toBe(obj.expected);
+        if (Array.isArray(obj.expected)) {
+          expect(res).toStrictEqual(obj.expected);
+        } else {
+          expect(res).toBe(obj.expected);
+        }
       },
     );
   });
