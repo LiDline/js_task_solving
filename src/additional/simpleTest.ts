@@ -6,9 +6,9 @@ type TestCases = {
   secondInput?: InputData;
 };
 
-export default function simpleTest<A, T>(
+export default function simpleTest<A, B, T>(
   testCases: TestCases[],
-  func: (...args: A[]) => T,
+  func: (...args: (A | B)[]) => T,
 ) {
   testCases.forEach((obj, id) => {
     test(
@@ -17,7 +17,7 @@ export default function simpleTest<A, T>(
       () => {
         const res =
           obj.secondInput !== undefined
-            ? func(obj.input as A, obj.secondInput as A)
+            ? func(obj.input as A, obj.secondInput as B)
             : func(obj.input as A);
 
         if (Array.isArray(obj.expected)) {

@@ -38,8 +38,8 @@ export function toMatrix2xN(array: number[]) {
  * @param ...arrays number[][]
  * @return number[]
  */
-export function mergeArrays(...arrays: number[][]) {
-  const res = arrays.flat(Infinity);
+export function mergeArrays(...arrays: number[][]): number[] {
+  const res = arrays.flat(Infinity) as number[];
 
   return res;
 }
