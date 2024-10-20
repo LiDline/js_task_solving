@@ -55,6 +55,7 @@ describe('Уровень 2.2', () => {
       { input: [1], expected: 1 },
       { input: [], expected: 0 },
       { input: [1, 1, -2, -2], expected: -0.5 },
+      { input: [1, 1, 2, -2], expected: Infinity },
     ];
 
     simpleTest(testCases, divideSumOfHalves);

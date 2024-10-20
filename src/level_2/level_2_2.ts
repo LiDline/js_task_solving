@@ -1,4 +1,4 @@
-import { getSumOfPositive } from '../level_1/level_1_6';
+import { getSumFromArray } from '../additional/utils';
 
 /**
  * 2.2.1 Возвращает количество отрицательных чисел в массиве
@@ -48,10 +48,8 @@ export function removePenultimateElement(str: string) {
  * @return number
  */
 export function divideSumOfHalves(array: number[]) {
-  const getSum = (arr: number[]) => arr.reduce((sum, current) => (sum += current), 0);
-
   if (!array.length || array.length == 1) {
-    return getSum(array);
+    return getSumFromArray(array);
   }
 
   const indexHalf = Math.floor(array.length / 2);
@@ -59,7 +57,7 @@ export function divideSumOfHalves(array: number[]) {
   const firstHalf = array.slice(0, indexHalf);
   const secondHalf = array.slice(indexHalf);
 
-  return getSum(firstHalf) / getSum(secondHalf);
+  return getSumFromArray(firstHalf) / getSumFromArray(secondHalf);
 }
 
 // -----------------------------------------------------------------------------------------------------
