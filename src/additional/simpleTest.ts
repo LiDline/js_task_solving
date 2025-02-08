@@ -6,6 +6,13 @@ type TestCases = {
   secondInput?: InputData;
 };
 
+
+/**
+ * Проверяет функцию, переданную в качестве параметра, используя массив входных тестовых данных
+ * @param testCases TestCases[]
+ * @param func function
+ * @return void
+ */
 export default function simpleTest<A, B, T>(
   testCases: TestCases[],
   func: (...args: (A | B)[]) => T,

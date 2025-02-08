@@ -1,5 +1,4 @@
 import { getStringFromNum } from '../additional/utils';
-import { getSumOfPositive } from './level_1_6';
 
 /**
  * 1.7.1 Возвращает массив букв строки

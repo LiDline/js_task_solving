@@ -5,3 +5,7 @@ export function getStringFromNum(num: number) {
 export function getSumFromArray(arr: number[]) {
   return arr.reduce((sum, current) => (sum += current), 0);
 }
+
+export function isNumber(symbol: unknown) {
+  return !isNaN(Number(symbol));
+}
