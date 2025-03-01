@@ -53,7 +53,6 @@ export function ratioOfEvenOddIndexSum(nums: number[]): number {
       notEvenSum += nums[i];
     }
   }
-console.log(evenSum, notEvenSum);
 
   return evenSum / notEvenSum;
 }

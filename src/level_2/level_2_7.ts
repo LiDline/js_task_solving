@@ -1,4 +1,4 @@
-import { isEvenNumber, isNegative } from '../level_1/level_1_1';
+import { isEvenNumber } from '../level_1/level_1_1';
 
 /**
  * 2.7.1 Возвращает строку,в которой переводятся в верхний регистр все подстроки, в которых количество букв меньше или равно 3
