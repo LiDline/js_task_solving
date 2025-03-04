@@ -9,3 +9,7 @@ export function getSumFromArray(arr: number[]) {
 export function isNumber(symbol: unknown) {
   return !isNaN(Number(symbol));
 }
+
+export function getStrFromNumWithoutMinusAndComa(num: number) {
+  return String(getStringFromNum(num)).replace('.', '');
+}

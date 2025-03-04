@@ -1,4 +1,4 @@
-type InputData = string | number | number[] | string[] | number[][] | null | object;
+type InputData = string | number | number[] | string[] | number[][] | null | object | undefined;
 
 type TestCases = {
   input: InputData;
