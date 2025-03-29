@@ -15,7 +15,7 @@ type TestCases = {
  */
 export default function simpleTest<A, B, T>(
   testCases: TestCases[],
-  func: (...args: (A | B)[]) => T,
+  func: (...args: any[]) => T,
 ) {
   testCases.forEach((obj, id) => {
     test(
