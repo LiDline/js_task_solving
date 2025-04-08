@@ -1,5 +1,3 @@
-import { isEvenNumber } from '../level_1/level_1_1';
-
 /**
  * 3.8.1 Проверяет, что все числа из массива содержат в себе цифру 3
  * @param array number[]
