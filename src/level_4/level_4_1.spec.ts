@@ -161,6 +161,14 @@ describe('Уровень 4.1', () => {
         input: new Date('2024-02-19'), // Конец Водолея, начало Рыб
         expected: 'Рыбы',
       },
+      {
+        input: new Date('2024-01-18'), 
+        expected: 'Козерог',
+      },
+      {
+        input: new Date('2024-08-15'), 
+        expected: 'Лев',
+      },
     ];
 
     simpleTest(testCases, getZodiacSign);

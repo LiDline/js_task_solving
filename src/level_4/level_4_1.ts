@@ -68,6 +68,7 @@ export function getZodiacSign(date: Date) {
     9: 'Скорпион',
     10: 'Стрелец',
     11: 'Козерог',
+    12: 'Козерог',
   };
 
   type T = keyof typeof zodiac;
@@ -84,26 +85,23 @@ export function getZodiacSign(date: Date) {
     { start: { day: 23, month: 8 }, end: { day: 22, month: 9 } }, // Весы
     { start: { day: 23, month: 9 }, end: { day: 21, month: 10 } }, // Скорпион
     { start: { day: 22, month: 10 }, end: { day: 21, month: 11 } }, // Стрелец
-    { start: { day: 22, month: 11 }, end: { day: 19, month: 0 }, additional: 1 }, // Козерог
+    { start: { day: 22, month: 11 }, end: { day: 31, month: 11 } }, // Козерог
+    { start: { day: 1, month: 0 }, end: { day: 19, month: 0 } }, // Козерог
   ];
 
   const zodiacWithDateInNumber = zodiacStartAndEnd.map((element, i) => {
     const start = new Date(date).setMonth(element.start.month, element.start.day);
-    const end = new Date(date).setFullYear(
-      element.additional ? element.additional + date.getFullYear() : date.getFullYear(),
-      element.end.month,
-      element.end.day,
-    );
+    const end = new Date(date).setMonth(element.end.month, element.end.day);
 
     return {
       start,
       end,
-      i,
+      i: i as T,
     };
   });
 
   const indexOfZodiac = zodiacWithDateInNumber.findIndex(
-    (obj) => obj.start >= date.getTime() && date.getDate() <= obj.end,
+    (obj) => date.getTime() >= obj.start && date.getTime() <= obj.end,
   ) as T;
 
   return zodiac[indexOfZodiac];
