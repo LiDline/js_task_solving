@@ -74,8 +74,8 @@ export function fillRandomLettersArray(length: number) {
       max: 'Z'.charCodeAt(0),
     },
     lower: {
-      min: 'A'.charCodeAt(0),
-      max: 'Z'.charCodeAt(0),
+      min: 'a'.charCodeAt(0),
+      max: 'z'.charCodeAt(0),
     },
   };
 

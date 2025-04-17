@@ -1,4 +1,6 @@
-export const ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
+export const ONE_DAY_IN_SEC = 24 * 60 * 60;
+
+export const ONE_DAY_IN_MS = ONE_DAY_IN_SEC * 1000;
 
 export const LANG_DICTIONARY = {
   Mon: 'Пн',
