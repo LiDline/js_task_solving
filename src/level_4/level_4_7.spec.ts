@@ -5,27 +5,27 @@ describe('Уровень 4.7', () => {
   describe('4.7.2. Сделайте функцию, которая параметром будет принимать два массива и возвращать массив их общих элементов.', () => {
     const testCases = [
       {
-        input: { array1: [1, 2, 3, 4], array2: [3, 4, 5, 6] },
+        input: { arrayOne: [1, 2, 3, 4], arrayTwo: [3, 4, 5, 6] },
         expected: [3, 4], // Общие элементы: 3 и 4
       },
       {
-        input: { array1: [7, 8, 9], array2: [10, 11, 12] },
+        input: { arrayOne: [7, 8, 9], arrayTwo: [10, 11, 12] },
         expected: [], // Нет общих элементов
       },
       {
-        input: { array1: [1, 2, 2, 3], array2: [2, 2, 4] },
+        input: { arrayOne: [1, 2, 2, 3], arrayTwo: [2, 2, 4] },
         expected: [2], // Общий элемент: 2 (уникальные значения)
       },
       {
-        input: { array1: ['a', 'b', 'c'], array2: ['b', 'c', 'd'] },
+        input: { arrayOne: ['a', 'b', 'c'], arrayTwo: ['b', 'c', 'd'] },
         expected: ['b', 'c'], // Общие элементы: "b" и "c"
       },
       {
-        input: { array1: [], array2: [1, 2, 3] },
+        input: { arrayOne: [], arrayTwo: [1, 2, 3] },
         expected: [], // Первый массив пустой, нет общих элементов
       },
       {
-        input: { array1: [1, 2, 3], array2: [] },
+        input: { arrayOne: [1, 2, 3], arrayTwo: [] },
         expected: [], // Второй массив пустой, нет общих элементов
       },
     ];
@@ -62,6 +62,14 @@ describe('Уровень 4.7', () => {
       {
         input: { arr: [7, 8, 9], element: 9 },
         expected: 7, // Следующий элемент после 9 — это 7 (циклично)
+      },
+      {
+        input: { arr: [7, 8, 9], element: 0 },
+        expected: undefined,
+      },
+      {
+        input: { arr: [], element: 0 },
+        expected: undefined,
       },
     ];
 

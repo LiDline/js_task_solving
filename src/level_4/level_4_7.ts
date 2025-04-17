@@ -3,8 +3,6 @@
  * Сделано в level_3_7.ts в sortWordsAlphabetically
  */
 
-import { randomInt } from 'node:crypto';
-
 // -----------------------------------------------------------------------------------------------------
 
 interface FindCommonElements {
@@ -59,5 +57,7 @@ export function getNextElement(param: GetNextElement) {
 
   if (indexElement == -1) return;
 
-  return arr[indexElement + 1];
+  const result = arr[indexElement + 1] ? arr[indexElement + 1] : arr[0];
+
+  return result;
 }
