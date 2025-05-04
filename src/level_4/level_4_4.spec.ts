@@ -137,13 +137,6 @@ describe('Уровень 4.4', () => {
   });
 
   describe('4.4.6. Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка.', () => {
-    const testCases = [
-      {
-        input: { n: 3, min: 1, max: 10 },
-        expected: [],
-      },
-    ];
-
     test(`1 Верный возврат для { n: 3, min: 1, max: 10 }`, () => {
       const result = fillRandomArray({ n: 3, min: 1, max: 10 });
 
