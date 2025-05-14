@@ -29,4 +29,16 @@ export default class Timestamp {
   getDate() {
     return new Date(this.date);
   }
+
+  toRusDate() {
+    const year = this.date.getFullYear();
+    const month = this.date.getMonth() + 1;
+    const day = this.date.getDate();
+    return `${String(day).padStart(2, '0')}.${String(month).padStart(2, '0')}.${year}`;
+  }
+
+  getWeekDay() {
+    const newDate = new Date(this.date);
+    return newDate.getDay();
+  }
 }
