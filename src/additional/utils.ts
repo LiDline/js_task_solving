@@ -13,3 +13,7 @@ export function isNumber(symbol: unknown) {
 export function getStrFromNumWithoutMinusAndComa(num: number) {
   return String(getStringFromNum(num)).replace('.', '');
 }
+
+export function removeEmptyValues<T>(array: T[]) {
+  return array.filter((value) => !!value && value != 0);
+}
